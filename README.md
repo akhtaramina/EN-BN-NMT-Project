@@ -2,8 +2,6 @@
 
 A comparison of two approaches to Neural Machine Translation (NMT) for the English–Bangla language pair: a Transformer encoder-decoder trained entirely **from scratch**, versus a pretrained multilingual model (**NLLB-200**) adapted via **transfer learning (fine-tuning)**.
 
-Final project for CMPE 252 – Artificial Intelligence and Data Engineering.
-
 ## Results
 
 | Metric | From-Scratch Transformer | NLLB Fine-Tuned |
