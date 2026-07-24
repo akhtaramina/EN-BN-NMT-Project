@@ -1,0 +1,8 @@
+{
+  "model": "from_scratch_transformer",
+  "bleu_score": 2.8622216504000457,
+  "test_set_size": 2000,
+  "final_training_loss": 2.5890848131659414,
+  "training_examples": 99260,
+  "epochs": 25
+}
