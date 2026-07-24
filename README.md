@@ -2,6 +2,8 @@
 
 A comparison of two approaches to Neural Machine Translation (NMT) for the English–Bangla language pair: a Transformer encoder-decoder trained entirely **from scratch**, versus a pretrained multilingual model (**NLLB-200**) adapted via **transfer learning (fine-tuning)**.
 
+📄 [Full project write-up (PDF)](./EN-BN-NMT-Project-Writeup.pdf)
+
 ## Results
 
 | Metric | From-Scratch Transformer | NLLB Fine-Tuned |
@@ -19,7 +21,7 @@ The fine-tuned NLLB model achieved a BLEU score **more than 3x higher** than the
 
 ```
 ├── EN-BN-NMT-Project.ipynb        # Full notebook: data prep, both models, training, evaluation
-├── EN-BN-NMT-Project-Report.docx  # Full written report (methodology, results, challenges)
+├── EN-BN-NMT-Project-Writeup.pdf  # Full project write-up (methodology, results, challenges)
 ├── spm_en.model / spm_en.vocab    # SentencePiece tokenizer (English)
 ├── spm_bn.model / spm_bn.vocab    # SentencePiece tokenizer (Bangla)
 ├── results_from_scratch.json      # Saved metrics for the from-scratch model
@@ -40,7 +42,7 @@ The fine-tuned NLLB model achieved a BLEU score **more than 3x higher** than the
 
 **Fine-tuned model:** [`facebook/nllb-200-distilled-600M`](https://huggingface.co/facebook/nllb-200-distilled-600M), fine-tuned on a 20,000-example subset. Fitting this on a free-tier T4 GPU required gradient checkpointing, mixed-precision (fp16) training, and gradient accumulation (effective batch size 8, physical batch size 1).
 
-Full methodology, hyperparameters, and a qualitative error analysis (including a documented token-repetition failure mode in the from-scratch model) are in the [project report](./EN-BN-NMT-Project-Report.docx).
+Full methodology, hyperparameters, and a qualitative error analysis (including a documented token-repetition failure mode in the from-scratch model) are in the [full write-up](./EN-BN-NMT-Project-Writeup.pdf).
 
 ## Reproducing This Project
 
